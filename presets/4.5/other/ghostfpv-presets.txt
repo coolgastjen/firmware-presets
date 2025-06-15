@@ -361,7 +361,7 @@ feature OSD
 #$ OPTION_GROUP END
 
 #$ OPTION_GROUP BEGIN: OSD GPS
-	#$ OPTION BEGIN (UNCHECKED): DJI  
+	#$ OPTION BEGIN (UNCHECKED): DJI GPS 
 		# GPS och höjd
 		set osd_gps_speed_pos = 3459
 		set osd_gps_sats_pos = 3267
