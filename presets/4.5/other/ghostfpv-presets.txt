@@ -374,7 +374,7 @@ feature OSD
 #$ OPTION_GROUP END
 
 
-#$ OPTION_GROUP BEGIN: Rates 
+#$ OPTION_GROUP BEGIN: VTX 
 	#$ OPTION BEGIN (UNCHECKED): HDZERO
 		set vtx_band = 5
 		set vtx_channel = 5
