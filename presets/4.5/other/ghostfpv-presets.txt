@@ -9,7 +9,7 @@
 #$ PARSER: MARKED
 
 #$ DESCRIPTION: -----------
-#$ DESCRIPTION: GhostFPV
+#$ DESCRIPTION: GhostFPV settings
 #$ DESCRIPTION:
 
 
