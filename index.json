@@ -149,7 +149,7 @@
   "presets": [
     {
       "fullPath": "presets/4.5/other/ghostfpv-presets.txt",
-      "hash": "2e11b15728078cae7d80cfdd31c711d626caae6c7f57873a35e8b34f2130b46f",
+      "hash": "575a96a82fd793c0b057cfb579d2a0dfdb50c400e2e6526a185cf282e4a3be55",
       "title": "GhostFPV presets",
       "firmware_version": [
         "4.5",
