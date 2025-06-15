@@ -176,6 +176,7 @@
       "FPV_Cam",
       "FPVian",
       "Garban",
+      "GhostFPV",
       "IllusionFpv",
       "Ivan Efimov (Limon)",
       "Jakub Espandr (FlyCamCzech)",
@@ -6460,29 +6461,6 @@
       "priority": 100
     },
     {
-      "fullPath": "presets/4.5/ghost_fpv/test.txt",
-      "hash": "2d035e4ad758990caee3b13bc1e817724b6dac4d3b7c16abba071b8817b9d58e",
-      "title": "UAV Tech - 6\"/7\" (750-1000g AUW)",
-      "firmware_version": [
-        "4.5",
-        "4.5"
-      ],
-      "category": "TUNE",
-      "status": "OFFICIAL",
-      "keywords": [
-        "4S",
-        "6S",
-        "6in",
-        "7in",
-        "6\"",
-        "7\"",
-        "freestyle",
-        "long range"
-      ],
-      "author": "UAV Tech (Mark Spatz)",
-      "priority": 1000000000000
-    },
-    {
       "fullPath": "presets/4.5/leds/LED VTX  race mode.txt",
       "hash": "9f7ff587ab9bb60c8902dfdd14a4b3477cf3d3605a3eccdc771ed8bfd4a1ebee",
       "title": "RACE mode LED settings",
@@ -6715,6 +6693,29 @@
       "author": "Daniel Appel / Tehllama",
       "force_options_review": true,
       "priority": 0
+    },
+    {
+      "fullPath": "presets/4.5/other/test.txt",
+      "hash": "74df138fca4cb8fc8e8b0a8aa61ba5c8b8551c304e6ea60e4b9b1ad70d8eca59",
+      "title": "UAV Tech - 6\"/7\" (750-1000g AUW)",
+      "firmware_version": [
+        "4.5",
+        "4.5"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "4S",
+        "6S",
+        "6in",
+        "7in",
+        "6\"",
+        "7\"",
+        "freestyle",
+        "long range"
+      ],
+      "author": "GhostFPV",
+      "priority": 1000000000000
     },
     {
       "fullPath": "presets/4.5/other/zoefpv.txt",
