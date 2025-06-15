@@ -1,0 +1,61 @@
+#$ TITLE: GhostFPV presets
+#$ FIRMWARE_VERSION: 4.5
+#$ FIRMWARE_VERSION: 4.5
+#$ CATEGORY: TUNE
+#$ STATUS: OFFICIAL
+#$ KEYWORDS: Ghost fpv
+#$ AUTHOR: GhostFPV
+
+#$ PARSER: MARKED
+
+#$ DESCRIPTION: -----------
+#$ DESCRIPTION: GhostFPV
+#$ DESCRIPTION:
+
+
+# -- Main features --
+set craft_name = Ghost FPV
+feature -AIRMODE
+feature GPS
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+
+#$ OPTION_GROUP BEGIN: Battery
+    #$ OPTION BEGIN (CHECKED): LiPo 
+    	# -- ADDER: For HIGH gyro vibration builds --
+  		set vbat_max_cell_voltage = 420
+		set vbat_min_cell_voltage = 340
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): LiPo HV
+    	# -- ADDER: For Medium gyro vibration builds --
+   		set vbat_max_cell_voltage = 435
+		set vbat_min_cell_voltage = 320
+    #$ OPTION END
+#$ OPTION_GROUP END
+
+#$ OPTION_GROUP BEGIN: Modes
+    #$ OPTION BEGIN (UNCHECKED): AIR MODE
+    	# -- ADDER: For 16 & 24k ESC PWM Settings --
+    	aux 5 28 5 1525 2100 0 0
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): LAUNCH MODE
+    	# -- ADDER: For 48k+ ESC PWM Settings --
+    	aux 5 49 5 1525 2100 0 0
+    #$ OPTION END
+	# ARM
+	aux 0 0 0 1700 2100 0 0
+	# ANGLE
+	aux 1 1 4 1525 2100 0 0
+	# Beeper
+	aux 2 13 7 1575 2100 0 0
+	# FLIP OVER
+	aux 3 35 1 1575 2100 0 0
+	# PREARM
+	aux 4 36 6 1575 2100 0 0
+	# PROFLE RATE (AUX 4)
+	adjrange 0 0 3 900 2100 12 3 0 0	
+
+#$ OPTION_GROUP END
