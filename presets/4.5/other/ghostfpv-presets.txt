@@ -76,6 +76,7 @@ feature OSD
 
 
 #$ OPTION_GROUP BEGIN: Rates 
+ #$ OPTION BEGIN (UNCHECKED): GhostFPV
    rateprofile 0
 
 	# rateprofile 0
@@ -124,6 +125,7 @@ feature OSD
 	set roll_expo = 0
 	set pitch_expo = 0
 	set yaw_expo = 0
+	#$ OPTION END
 #$ OPTION_GROUP END
 
 #$ OPTION_GROUP BEGIN: OSD
@@ -315,9 +317,9 @@ feature OSD
 		set osd_craft_name_pos = 2444
 		set osd_pilot_name_pos = 43
 		set osd_warnings_pos = 2092
-		#$ OPTION END
+	#$ OPTION END
 	
-		#$ OPTION BEGIN (UNCHECKED): DJI    	
+	#$ OPTION BEGIN (UNCHECKED): DJI    	
 		# Layoutinställningar
 		set osd_canvas_width = 53
 		set osd_canvas_height = 20	
@@ -355,16 +357,17 @@ feature OSD
 		set osd_craft_name_pos = 2647
 		set osd_sys_warnings_pos = 409
 		
-		#$ OPTION END		
-	#$ OPTION_GROUP END
-	#$ OPTION_GROUP BEGIN: OSD GPS
-		#$ OPTION BEGIN (UNCHECKED): DJI  
-		# GPS och höjd
-		set osd_gps_speed_pos = 3459
-		set osd_gps_sats_pos = 3267
-		set osd_home_dir_pos = 1122
-		set osd_home_dist_pos = 1024
-		set osd_compass_bar_pos = 21
-		set osd_altitude_pos = 3427			
-		#$ OPTION END
-	#$ OPTION_GROUP END
+	#$ OPTION END		
+#$ OPTION_GROUP END
+
+#$ OPTION_GROUP BEGIN: OSD GPS
+	#$ OPTION BEGIN (UNCHECKED): DJI  
+	# GPS och höjd
+	set osd_gps_speed_pos = 3459
+	set osd_gps_sats_pos = 3267
+	set osd_home_dir_pos = 1122
+	set osd_home_dist_pos = 1024
+	set osd_compass_bar_pos = 21
+	set osd_altitude_pos = 3427			
+	#$ OPTION END
+#$ OPTION_GROUP END
