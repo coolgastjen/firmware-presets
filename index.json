@@ -6696,8 +6696,8 @@
     },
     {
       "fullPath": "presets/4.5/other/test.txt",
-      "hash": "b6c0ab979a2c2992f60ebd425fbacd70f3b902fee53fa95a6614f4d45fe6f810",
-      "title": "GhostFPV",
+      "hash": "03c9e4a24291502a2072dab7d5faba1ef62f3e7b334be9a75e864048ebe67872",
+      "title": "GhostFPV presets",
       "firmware_version": [
         "4.5",
         "4.5"
