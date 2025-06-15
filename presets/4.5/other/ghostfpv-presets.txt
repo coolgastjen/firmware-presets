@@ -362,12 +362,12 @@ feature OSD
 
 #$ OPTION_GROUP BEGIN: OSD GPS
 	#$ OPTION BEGIN (UNCHECKED): DJI  
-	# GPS och höjd
-	set osd_gps_speed_pos = 3459
-	set osd_gps_sats_pos = 3267
-	set osd_home_dir_pos = 1122
-	set osd_home_dist_pos = 1024
-	set osd_compass_bar_pos = 21
-	set osd_altitude_pos = 3427			
+		# GPS och höjd
+		set osd_gps_speed_pos = 3459
+		set osd_gps_sats_pos = 3267
+		set osd_home_dir_pos = 1122
+		set osd_home_dist_pos = 1024
+		set osd_compass_bar_pos = 21
+		set osd_altitude_pos = 3427			
 	#$ OPTION END
 #$ OPTION_GROUP END
