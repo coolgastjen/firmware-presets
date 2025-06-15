@@ -22,19 +22,6 @@ feature LED_STRIP
 feature OSD
 
 
-#$ OPTION_GROUP BEGIN: ELRS 500
-    #$ OPTION BEGIN (CHECKED): LiPo 
-    	# -- ADDER: For HIGH gyro vibration builds --
-  		set vbat_max_cell_voltage = 420
-		set vbat_min_cell_voltage = 340
-    #$ OPTION END
-
-    #$ OPTION BEGIN (UNCHECKED): LiPo HV
-    	# -- ADDER: For Medium gyro vibration builds --
-   		set vbat_max_cell_voltage = 435
-		set vbat_min_cell_voltage = 320
-    #$ OPTION END
-#$ OPTION_GROUP END
 
 #$ OPTION_GROUP BEGIN: Battery
     #$ OPTION BEGIN (CHECKED): LiPo 
