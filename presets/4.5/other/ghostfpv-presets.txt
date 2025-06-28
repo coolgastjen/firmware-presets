@@ -474,9 +474,9 @@ feature OSD
 		# MOBULA X12----------------------------------------
 		set vtx_band = 5
 		set vtx_channel = 6
-		set vtx_power = 4
+		set vtx_power = 1
 		set vtx_low_power_disarm = UNTIL_FIRST_ARM
-		set vtx_freq = 5843
+	
 		# vtxtable
 		vtxtable bands 6
 		vtxtable channels 8
