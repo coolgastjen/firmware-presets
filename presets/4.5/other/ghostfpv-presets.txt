@@ -22,43 +22,113 @@ feature OSD
 
 
 
+
 #$ OPTION_GROUP BEGIN: Battery
     #$ OPTION BEGIN (CHECKED): LiPo 
-    	# -- ADDER: For HIGH gyro vibration builds --
   		set vbat_max_cell_voltage = 420
-		set vbat_min_cell_voltage = 340
+		set vbat_min_cell_voltage = 360
     #$ OPTION END
 
     #$ OPTION BEGIN (UNCHECKED): LiPo HV
-    	# -- ADDER: For Medium gyro vibration builds --
    		set vbat_max_cell_voltage = 435
-		set vbat_min_cell_voltage = 320
+		set vbat_min_cell_voltage = 330
     #$ OPTION END
 #$ OPTION_GROUP END
 
-#$ OPTION_GROUP BEGIN: Modes
-   
-	 #$ OPTION BEGIN (UNCHECKED): AIR MODE
-    	# -- ADDER: For 16 & 24k ESC PWM Settings --
-    	aux 5 28 5 1525 2100 0 0
+#$ OPTION_GROUP BEGIN: MODES
+   # RESET
+	aux 0 0 0 900 900 0 0
+	aux 1 0 0 900 900 0 0
+	aux 2 0 0 900 900 0 0
+	aux 3 0 0 900 900 0 0
+	aux 4 0 0 900 900 0 0
+	aux 5 0 0 900 900 0 0
+	aux 6 0 0 900 900 0 0
+	aux 7 0 0 900 900 0 0
+	aux 8 0 0 900 900 0 0
+	aux 9 0 0 900 900 0 0
+	aux 10 0 0 900 900 0 0
+
+
+	 #$ OPTION BEGIN (UNCHECKED): DJI - Freestyle (NO PIT)
+		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
+		#ARM
+		aux 0 0 0 1700 2100 0 0
+		#ANGLE
+		aux 1 1 4 1700 2100 0 0
+		#BEEPER
+		aux 2 13 7 1575 2100 0 0
+		#FLIP OVER 
+		aux 3 35 1 1575 2100 0 0
+		# PRE ARM
+		aux 4 36 6 1575 2100 0 0
+		# NO PIT MODE OR POWER
+		# AIR MODE
+		aux 5 28 5 1525 2100 0 0
+  	 #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): HDZero RACE (LAUNCH MODE instead of ANGLE)
+		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
+		#ARM
+		aux 0 0 0 1700 2100 0 0
+		#LAUNCH CONTROL
+		aux 1 49 4 1700 2100 0 0
+		#BEEPER
+		aux 2 13 7 1575 2100 0 0
+		#FLIP OVER 
+		aux 3 35 1 1575 2100 0 0
+		# PRE ARM
+		aux 4 36 6 1575 2100 0 0
+		# SET POWER INSTEAD OF PIT MODE
+		vtx 0 2 0 0 3 900 1300
+		vtx 1 2 0 0 1 1300 1700
+		vtx 2 2 0 0 2 1700 2100
+		# AIR MODE
+		aux 5 28 5 1525 2100 0 0
+	#$ OPTION END
+
+	 #$ OPTION BEGIN (UNCHECKED): HDZero Freestyle (ANGLE instead off LAUNCH)
+		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
+		#ARM
+		aux 0 0 0 1700 2100 0 0
+		#ANGLE
+		aux 1 1 4 1700 2100 0 0
+		#BEEPER
+		aux 2 13 7 1575 2100 0 0
+		#FLIP OVER 
+		aux 3 35 1 1575 2100 0 0
+		# PRE ARM
+		aux 4 36 6 1575 2100 0 0
+		# SET POWER INSTEAD OF PIT MODE
+		vtx 0 2 0 0 3 900 1300
+		vtx 1 2 0 0 1 1300 1700
+		vtx 2 2 0 0 2 1700 2100
+		# AIR MODE
+		aux 5 28 5 1525 2100 0 0
+	#$ OPTION END
+	
+  	#$ OPTION BEGIN (UNCHECKED): ANALOG Race (LAUNCH MODE instead of ANGLE)
+		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
+		#ARM
+		aux 0 0 0 1700 2100 0 0
+		#LAUNCH CONTROL
+		aux 1 49 4 1700 2100 0 0
+		#BEEPER
+		aux 2 13 7 1575 2100 0 0
+		#FLIP OVER 
+		aux 3 35 1 1575 2100 0 0
+		# PRE ARM
+		aux 4 36 6 1575 2100 0 0
+		# PTI MODE
+		aux 5 39 2 900 1150 0 0
+		# AIR MODE
+		aux 6 28 5 1525 2100 0 0
     #$ OPTION END
 
-    #$ OPTION BEGIN (UNCHECKED): LAUNCH MODE
-    	# -- ADDER: For 48k+ ESC PWM Settings --
-    	aux 5 49 5 1525 2100 0 0
-    #$ OPTION END
-	# ARM
-	aux 0 0 0 1700 2100 0 0
-	# ANGLE
-	aux 1 1 4 1525 2100 0 0
-	# Beeper
-	aux 2 13 7 1575 2100 0 0
-	# FLIP OVER
-	aux 3 35 1 1575 2100 0 0
-	# PREARM
-	aux 4 36 6 1575 2100 0 0
-	# PROFLE RATE (AUX 4)
+
+	# PROFLE RATES (AUX 4)
 	adjrange 0 0 3 900 2100 12 3 0 0	
+
 #$ OPTION_GROUP END
 
 
@@ -364,11 +434,23 @@ feature OSD
 
 
 #$ OPTION_GROUP BEGIN: VTX 
+	#--- Reset 
+	vtx 0 0 0 0 0 900 900
+	vtx 1 0 0 0 0 900 900
+	vtx 2 0 0 0 0 900 900
+	vtx 3 0 0 0 0 900 900
+	vtx 4 0 0 0 0 900 900
+	vtx 5 0 0 0 0 900 900
+	vtx 6 0 0 0 0 900 900
+	vtx 7 0 0 0 0 900 900
+	vtx 8 0 0 0 0 900 900
+	vtx 9 0 0 0 0 900 900
+
 	#$ OPTION BEGIN (UNCHECKED): HDZERO
 		set vtx_band = 5
 		set vtx_channel = 5
 		set vtx_power = 3
-		set vtx_freq = 5806
+		set vtx_low_power_disarm = UNTIL_FIRST_ARM
 
 		# vtxtable
 		vtxtable bands 6
@@ -393,7 +475,7 @@ feature OSD
 		set vtx_band = 5
 		set vtx_channel = 6
 		set vtx_power = 4
-		set vtx_low_power_disarm = ON
+		set vtx_low_power_disarm = UNTIL_FIRST_ARM
 		set vtx_freq = 5843
 		# vtxtable
 		vtxtable bands 6
@@ -407,10 +489,29 @@ feature OSD
 		vtxtable powerlevels 5
 		vtxtable powervalues 10 2 14 20 26
 		vtxtable powerlabels 0 RCE 25 100 400
+		
+	#$ OPTION END
+	#$ OPTION BEGIN (UNCHECKED): Analog TBS Unify Pro 5v
+		set vtx_band = 5
+		set vtx_channel = 6
+		set vtx_power = 1
+		set vtx_low_power_disarm = UNTIL_FIRST_ARM
+		set vtx_softserial_alt = OFF
+		set vtx_freq = 5843
+		set vtx_pit_mode_freq = 0
+		set vtx_halfduplex = ON
 
-		# vtx power setting
-		vtx 0 2 0 0 1 900 1300
-		vtx 1 2 0 0 3 1300 1700
-		vtx 2 2 0 0 4 1700 2100
+		# vtxtable
+		vtxtable bands 5
+		vtxtable channels 8
+		vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+		vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+		vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+		vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+		vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+		vtxtable powerlevels 4
+		vtxtable powervalues 14 20 26 28
+		vtxtable powerlabels 25 100 400 MAX
+
 	#$ OPTION END
 #$ OPTION_GROUP END
