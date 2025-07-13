@@ -646,7 +646,6 @@ beeper RX_LOST
 		set yaw_rate_limit = 1998
 
 		#PID
-		set simplified_pids_mode = RP
 		set dyn_idle_min_rpm = 0
 		set dyn_idle_p_gain = 50
 		set dyn_idle_i_gain = 50
@@ -663,8 +662,13 @@ beeper RX_LOST
 		set simplified_feedforward_gain = 100
 		set simplified_pitch_d_gain = 100
 		set simplified_pitch_pi_gain = 100
-		set simplified_dterm_filter = OFF
-		set simplified_dterm_filter_multiplier = 200
+	
+		set tpa_mode = D
+		set tpa_rate = 60
+		set tpa_breakpoint = 1250
+		set tpa_low_rate = 20
+		set tpa_low_breakpoint = 1050
+		set tpa_low_always = OFF
 
 
   	 #$ OPTION END
