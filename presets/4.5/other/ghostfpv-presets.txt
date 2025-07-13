@@ -551,7 +551,7 @@ feature OSD
 		aux 4 36 6 1575 2100 0 0
 	
 		#set angle p gain to 100
-		angle_p_gain = 100
+		set angle_p_gain = 100
 
 		rateprofile 1
 
