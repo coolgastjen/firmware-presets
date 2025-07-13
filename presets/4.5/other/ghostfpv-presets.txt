@@ -675,6 +675,7 @@ beeper RX_LOST
 		set i_yaw = 85
 		set d_yaw = 0
 		set f_yaw = 150
+		
 	
 		set tpa_mode = D
 		set tpa_rate = 60
