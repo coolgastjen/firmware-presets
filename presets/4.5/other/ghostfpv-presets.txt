@@ -20,10 +20,14 @@ feature TELEMETRY
 feature -LED_STRIP
 feature OSD
 
+beeper RX_SET
+beeper RX_LOST
+
 #$ OPTION_GROUP BEGIN: Battery
+	set report_cell_voltage = ON
     #$ OPTION BEGIN (CHECKED): LiPo 
   		set vbat_max_cell_voltage = 420
-		set vbat_min_cell_voltage = 360
+		set vbat_min_cell_voltage = 340
     #$ OPTION END
 
     #$ OPTION BEGIN (UNCHECKED): LiPo HV
