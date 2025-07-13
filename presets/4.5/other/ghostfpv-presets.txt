@@ -653,6 +653,7 @@ beeper RX_LOST
 		set dyn_idle_max_increase = 150
 		set dyn_idle_start_increase = 50
 		set level_race_mode = OFF
+
 		set simplified_pids_mode = RP
 		set simplified_master_multiplier = 100
 		set simplified_i_gain = 5
