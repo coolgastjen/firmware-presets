@@ -17,11 +17,130 @@
 set craft_name = Ghost FPV
 feature -AIRMODE
 feature TELEMETRY
-feature LED_STRIP
+feature -LED_STRIP
 feature OSD
 
 
+#$ OPTION_GROUP BEGIN: PID tuning
+  
 
+	 #$ OPTION BEGIN (UNCHECKED): DO IT
+		# SET MODES
+		aux 0 0 0 900 900 0 0
+		aux 1 0 0 900 900 0 0
+		aux 2 0 0 900 900 0 0
+		aux 3 0 0 900 900 0 0
+		aux 4 0 0 900 900 0 0
+		aux 5 0 0 900 900 0 0
+		aux 6 0 0 900 900 0 0
+		aux 7 0 0 900 900 0 0
+		aux 8 0 0 900 900 0 0
+		aux 9 0 0 900 900 0 0
+		aux 10 0 0 900 900 0 0
+
+		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
+		#ARM
+		aux 0 0 0 1700 2100 0 0
+		#ANGLE
+		aux 1 1 4 1700 2100 0 0		
+		# PRE ARM
+		aux 4 36 6 1575 2100 0 0
+	
+		#set angle p gain to 100
+		angle_p_gain = 100
+
+		rateprofile 1
+
+		# rateprofile 1
+		set rateprofile_name = Simpa
+		set thr_mid = 50
+		set thr_expo = 10
+		set rates_type = BETAFLIGHT
+		set quickrates_rc_expo = OFF
+		set roll_rc_rate = 100
+		set pitch_rc_rate = 100
+		set yaw_rc_rate = 100
+		set roll_expo = 0
+		set pitch_expo = 0
+		set yaw_expo = 0
+		set roll_srate = 0
+		set pitch_srate = 0
+		set yaw_srate = 0
+		set throttle_limit_type = OFF
+		set throttle_limit_percent = 100
+		set roll_rate_limit = 1998
+		set pitch_rate_limit = 1998
+		set yaw_rate_limit = 1998
+
+		rateprofile 1
+		
+		# rateprofile 2
+		set rateprofile_name = Simpa
+		set thr_mid = 50
+		set thr_expo = 10
+		set rates_type = BETAFLIGHT
+		set quickrates_rc_expo = OFF
+		set roll_rc_rate = 100
+		set pitch_rc_rate = 100
+		set yaw_rc_rate = 100
+		set roll_expo = 0
+		set pitch_expo = 0
+		set yaw_expo = 0
+		set roll_srate = 0
+		set pitch_srate = 0
+		set yaw_srate = 0
+		set throttle_limit_type = OFF
+		set throttle_limit_percent = 100
+		set roll_rate_limit = 1998
+		set pitch_rate_limit = 1998
+		set yaw_rate_limit = 1998
+
+		rateprofile 1
+		
+		# rateprofile 3
+		set rateprofile_name = Simpa
+		set thr_mid = 50
+		set thr_expo = 10
+		set rates_type = BETAFLIGHT
+		set quickrates_rc_expo = OFF
+		set roll_rc_rate = 100
+		set pitch_rc_rate = 100
+		set yaw_rc_rate = 100
+		set roll_expo = 0
+		set pitch_expo = 0
+		set yaw_expo = 0
+		set roll_srate = 0
+		set pitch_srate = 0
+		set yaw_srate = 0
+		set throttle_limit_type = OFF
+		set throttle_limit_percent = 100
+		set roll_rate_limit = 1998
+		set pitch_rate_limit = 1998
+		set yaw_rate_limit = 1998
+
+		#PID
+		set dyn_idle_min_rpm = 0
+		set dyn_idle_p_gain = 50
+		set dyn_idle_i_gain = 50
+		set dyn_idle_d_gain = 50
+		set dyn_idle_max_increase = 150
+		set dyn_idle_start_increase = 50
+		set level_race_mode = OFF
+		set simplified_pids_mode = RP
+		set simplified_master_multiplier = 100
+		set simplified_i_gain = 5
+		set simplified_d_gain = 70
+		set simplified_pi_gain = 100
+		set simplified_dmax_gain = 0
+		set simplified_feedforward_gain = 100
+		set simplified_pitch_d_gain = 100
+		set simplified_pitch_pi_gain = 100
+		set simplified_dterm_filter = OFF
+		set simplified_dterm_filter_multiplier = 200
+
+
+  	 #$ OPTION END
+#$ OPTION_GROUP END
 
 #$ OPTION_GROUP BEGIN: Battery
     #$ OPTION BEGIN (CHECKED): LiPo 
@@ -49,6 +168,16 @@ feature OSD
 	aux 9 0 0 900 900 0 0
 	aux 10 0 0 900 900 0 0
 
+	 #$ OPTION BEGIN (UNCHECKED): PID tuning
+		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
+		#ARM
+		aux 0 0 0 1700 2100 0 0
+		#ANGLE
+		aux 1 1 4 1700 2100 0 0		
+		# PRE ARM
+		aux 4 36 6 1575 2100 0 0
+		# NO PIT MODE OR POWER	
+  	 #$ OPTION END
 
 	 #$ OPTION BEGIN (UNCHECKED): DJI - Freestyle (NO PIT)
 		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
@@ -465,10 +594,6 @@ feature OSD
 		vtxtable powervalues 14 23 0
 		vtxtable powerlabels 25 200 0
 
-		# vtx power setting (2 på andra plats är AUX 3 )
-		vtx 0 2 0 0 3 900 1300
-		vtx 1 2 0 0 1 1300 1700
-		vtx 2 2 0 0 2 1700 2100
 	#$ OPTION END
 	#$ OPTION BEGIN (UNCHECKED): Analog X12 whoop
 		# MOBULA X12----------------------------------------
@@ -488,8 +613,8 @@ feature OSD
 		vtxtable band 6 LOWRACE  L FACTORY 5333 5373 5413 5453 5493 5533 5573 5613
 		vtxtable powerlevels 5
 		vtxtable powervalues 10 2 14 20 26
-		vtxtable powerlabels 0 RCE 25 100 400
-		
+		vtxtable powerlabels 0 RCE 25 100 400		
+
 	#$ OPTION END
 	#$ OPTION BEGIN (UNCHECKED): Analog TBS Unify Pro 5v
 		set vtx_band = 5
@@ -512,6 +637,6 @@ feature OSD
 		vtxtable powerlevels 4
 		vtxtable powervalues 0 1 2 3
 		vtxtable powerlabels 25 200 500 800
-	#$ OPTION END
 
+	#$ OPTION END
 #$ OPTION_GROUP END
