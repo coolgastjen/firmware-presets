@@ -37,7 +37,7 @@ beeper RX_LOST
 #$ OPTION_GROUP END
 
 #$ OPTION_GROUP BEGIN: MODES
-	#$ OPTION BEGIN (CHECKED): RESET
+	#$ OPTION BEGIN (UNCHECKED): RESET
 		# RESET
 			aux 0 0 0 900 900 0 0
 			aux 1 0 0 900 900 0 0
@@ -51,17 +51,7 @@ beeper RX_LOST
 			aux 9 0 0 900 900 0 0
 			aux 10 0 0 900 900 0 0
 	 #$ OPTION END
-	 #$ OPTION BEGIN (UNCHECKED): PID tuning
-		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
-		#ARM
-		aux 0 0 0 1700 2100 0 0
-		#ANGLE
-		aux 1 1 4 1700 2100 0 0		
-		# PRE ARM
-		aux 4 36 6 1575 2100 0 0
-		# NO PIT MODE OR POWER	
-  	 #$ OPTION END
-
+	
 	 #$ OPTION BEGIN (UNCHECKED): DJI - Freestyle (NO PIT)
 		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
 		#ARM
@@ -198,7 +188,7 @@ beeper RX_LOST
 #$ OPTION_GROUP END
 
 #$ OPTION_GROUP BEGIN: OSD
-	#$ OPTION BEGIN (CHECKED): RESET
+	#$ OPTION BEGIN (UNCHECKED): RESET
 		#STÄNG AV ALLT-------------------------------------------
 		# GPS och höjd
 		set osd_gps_speed_pos = 341
@@ -447,7 +437,7 @@ beeper RX_LOST
 
 
 #$ OPTION_GROUP BEGIN: VTX 
-	#$ OPTION BEGIN (CHECKED): RESET
+	#$ OPTION BEGIN (UNCHECKED): RESET
 		#--- Reset 
 		vtx 0 0 0 0 0 900 900
 		vtx 1 0 0 0 0 900 900
@@ -627,6 +617,7 @@ beeper RX_LOST
 		set yaw_rate_limit = 1998
 
 		#PID
+		set simplified_pids_mode = RP
 		set dyn_idle_min_rpm = 0
 		set dyn_idle_p_gain = 50
 		set dyn_idle_i_gain = 50
