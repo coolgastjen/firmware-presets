@@ -666,17 +666,22 @@ beeper RX_LOST
 		set p_pitch = 47
 		set i_pitch = 4
 		set d_pitch = 23
+		set d_min_pitch = 23
 		set f_pitch = 125
+
 		set p_roll = 45
 		set i_roll = 3
 		set d_roll = 21
+		set d_min_roll = 21
 		set f_roll = 120
+
 		set p_yaw = 39
 		set i_yaw = 85
 		set d_yaw = 0
+		set d_min_yaw = 0
 		set f_yaw = 150
-		
-	
+
+			
 		set tpa_mode = D
 		set tpa_rate = 60
 		set tpa_breakpoint = 1250
