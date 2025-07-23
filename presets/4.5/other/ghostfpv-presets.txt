@@ -383,6 +383,9 @@ beeper RX_LOST
 		set osd_current_pos = 302
 		set osd_mah_drawn_pos = 2350
 		set osd_battery_usage_pos = 25
+		set osd_avg_cell_voltage_pos = 2317
+		
+
 
 		# Signal och länk
 		set osd_rssi_pos = 314
@@ -390,6 +393,7 @@ beeper RX_LOST
 		set osd_link_tx_power_pos = 2072
 		set osd_rssi_dbm_pos = 2229
 		set osd_sys_lq_pos = 125
+		set osd_vtx_channel_pos = 2048
 
 		# Flygläge och kontroll
 		set osd_flymode_pos = 2401
