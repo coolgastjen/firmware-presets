@@ -372,7 +372,6 @@ beeper RX_LOST
 		# Layoutinställningar
 		set osd_canvas_width = 30
 		set osd_canvas_height = 13
-		set osd_displayport_device = AUTO
 		set vcd_video_system = NTSC
 
 		# GPS och höjd
