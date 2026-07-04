@@ -148,11 +148,25 @@
   },
   "presets": [
     {
+      "fullPath": "presets/4.5/other/ghostfpv-presets-tx15.txt",
+      "hash": "d73e2d9fb99221440d69ab594e4cf937adac3b75c13627e5e712a472da6a61dd",
+      "title": "GhostFPV presets TX15",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "TUNE",
+      "status": "OFFICIAL",
+      "keywords": [
+        "Ghost fpv"
+      ],
+      "author": "GhostFPV",
+      "priority": 1000000000000
+    },
+    {
       "fullPath": "presets/4.5/other/ghostfpv-presets.txt",
-      "hash": "139e82ff00d601deffedd4611f4369b4209da9f2dc728d5b243201a2ebc537eb",
+      "hash": "12a272985300e85c1cf84df8726cfb80576d22bf4a9ad50c7c8e32126712acd9",
       "title": "GhostFPV presets",
       "firmware_version": [
-        "4.5",
         "4.5"
       ],
       "category": "TUNE",
