@@ -1,4 +1,4 @@
-#$ TITLE: GhostFPV presets
+#$ TITLE: GhostFPV presets TX15
 #$ FIRMWARE_VERSION: 4.5
 #$ FIRMWARE_VERSION: 4.5
 #$ CATEGORY: TUNE
