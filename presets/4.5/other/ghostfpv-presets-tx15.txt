@@ -37,138 +37,52 @@ beeper RX_LOST
 #$ OPTION_GROUP END
 
 #$ OPTION_GROUP BEGIN: MODES
-	
-	 #$ OPTION BEGIN (UNCHECKED): DJI - Freestyle (NO PIT)
-		# RESET
-		aux 0 0 0 900 900 0 0
-		aux 1 0 0 900 900 0 0
-		aux 2 0 0 900 900 0 0
-		aux 3 0 0 900 900 0 0
-		aux 4 0 0 900 900 0 0
-		aux 5 0 0 900 900 0 0
-		aux 6 0 0 900 900 0 0
-	
-		vtx 0 0 0 0 0 900 900
-		vtx 1 0 0 0 0 900 900
-		vtx 2 0 0 0 0 900 900
 
+	# RESET
+	aux 0 0 0 900 900 0 0
+	aux 1 0 0 900 900 0 0
+	aux 2 0 0 900 900 0 0
+	aux 3 0 0 900 900 0 0
+	aux 4 0 0 900 900 0 0
+	aux 5 0 0 900 900 0 0
+	aux 6 0 0 900 900 0 0
 
-		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
-		#ARM
-		aux 0 0 0 1700 2100 0 0
-		#ANGLE
-		aux 1 1 4 1700 2100 0 0
-		#BEEPER
-		aux 2 13 7 1575 2100 0 0
-		#FLIP OVER 
-		aux 3 35 1 1575 2100 0 0
-		# PRE ARM
-		aux 4 36 6 1575 2100 0 0
-		# NO PIT MODE OR POWER
-		# AIR MODE
-		aux 5 28 5 1525 2100 0 0
-  	 #$ OPTION END
-
-    #$ OPTION BEGIN (UNCHECKED): HDZero RACE (LAUNCH MODE instead of ANGLE)
-		# RESET
-		aux 0 0 0 900 900 0 0
-		aux 1 0 0 900 900 0 0
-		aux 2 0 0 900 900 0 0
-		aux 3 0 0 900 900 0 0
-		aux 4 0 0 900 900 0 0
-		aux 5 0 0 900 900 0 0
-		aux 6 0 0 900 900 0 0
+	vtx 0 0 0 0 0 900 900
+	vtx 1 0 0 0 0 900 900
+	vtx 2 0 0 0 0 900 900			
 	
-		vtx 0 0 0 0 0 900 900
-		vtx 1 0 0 0 0 900 900
-		vtx 2 0 0 0 0 900 900
-		
-		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
-		#ARM
-		aux 0 0 0 1700 2100 0 0
-		#LAUNCH CONTROL
-		aux 1 49 4 1700 2100 0 0
-		#BEEPER
-		aux 2 13 7 1575 2100 0 0
-		#FLIP OVER 
-		aux 3 35 1 1575 2100 0 0
-		# PRE ARM
-		aux 4 36 6 1575 2100 0 0
-		# SET POWER INSTEAD OF PIT MODE
-		vtx 0 2 0 0 3 900 1300
-		vtx 1 2 0 0 1 1300 1700
-		vtx 2 2 0 0 2 1700 2100
-		# AIR MODE
-		aux 5 28 5 1525 2100 0 0
-	#$ OPTION END
+	#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
+	#ARM
+	aux 0 0 0 1700 2100 0 0
+	#ANGLE/HORIZON/ACRO
+	aux 1 1 3 925 1150 0 0
+	aux 2 2 3 1325 1700 0 0
+	#BEEPER
+	aux 3 13 4 1575 2100 0 0
+	#AIRMODE
+	aux 4 28 5 1525 2100 0 0	
+	#FLIP OVER 
+	aux 5 35 6 1575 2100 0 0
+	# PRE ARM
+	aux 6 36 1 1575 2100 0 0
 
-	 #$ OPTION BEGIN (UNCHECKED): HDZero Freestyle (ANGLE instead off LAUNCH)
-		# RESET
-		aux 0 0 0 900 900 0 0
-		aux 1 0 0 900 900 0 0
-		aux 2 0 0 900 900 0 0
-		aux 3 0 0 900 900 0 0
-		aux 4 0 0 900 900 0 0
-		aux 5 0 0 900 900 0 0
-		aux 6 0 0 900 900 0 0
 	
-		vtx 0 0 0 0 0 900 900
-		vtx 1 0 0 0 0 900 900
-		vtx 2 0 0 0 0 900 900
-		
-		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
-		#ARM
-		aux 0 0 0 1700 2100 0 0
-		#ANGLE
-		aux 1 1 4 1700 2100 0 0
-		#BEEPER
-		aux 2 13 7 1575 2100 0 0
-		#FLIP OVER 
-		aux 3 35 1 1575 2100 0 0
-		# PRE ARM
-		aux 4 36 6 1575 2100 0 0
-		# SET POWER INSTEAD OF PIT MODE
-		vtx 0 2 0 0 3 900 1300
-		vtx 1 2 0 0 1 1300 1700
-		vtx 2 2 0 0 2 1700 2100
-		# AIR MODE
-		aux 5 28 5 1525 2100 0 0
-	#$ OPTION END
-	
-  	#$ OPTION BEGIN (UNCHECKED): ANALOG Race (LAUNCH MODE instead of ANGLE)
-		# RESET
-		aux 0 0 0 900 900 0 0
-		aux 1 0 0 900 900 0 0
-		aux 2 0 0 900 900 0 0
-		aux 3 0 0 900 900 0 0
-		aux 4 0 0 900 900 0 0
-		aux 5 0 0 900 900 0 0
-		aux 6 0 0 900 900 0 0
-	
-		vtx 0 0 0 0 0 900 900
-		vtx 1 0 0 0 0 900 900
-		vtx 2 0 0 0 0 900 900
-		
-		#aux index (i ordning i betaflight), funktion, aux kanal (i betaflight är det +1, i controllern är det +5 då)
-		#ARM
-		aux 0 0 0 1700 2100 0 0
-		#LAUNCH CONTROL
-		aux 1 49 4 1700 2100 0 0
-		#BEEPER
-		aux 2 13 7 1575 2100 0 0
-		#FLIP OVER 
-		aux 3 35 1 1575 2100 0 0
-		# PRE ARM
-		aux 4 36 6 1575 2100 0 0
-		# PTI MODE
-		aux 5 39 2 900 1150 0 0
-		# AIR MODE
-		aux 6 28 5 1525 2100 0 0
-    #$ OPTION END
-
-
 	# PROFLE RATES (AUX 4)
-	adjrange 0 0 3 900 2100 12 3 0 0	
+	adjrange 0 0 7 900 2100 12 7 0 0
+	
+
+    #$ OPTION BEGIN (UNCHECKED): HDZero RACE (VTX Power instead of PIT)		
+		# SET POWER INSTEAD OF PIT MODE
+		vtx 0 2 0 0 3 900 1300
+		vtx 1 2 0 0 1 1300 1700
+		vtx 2 2 0 0 2 1700 2100	
+	#$ OPTION END
+
+	
+  	#$ OPTION BEGIN (UNCHECKED): ANALOG (PIT instead of VTX power)	
+		# PIT MODE
+		aux 7 39 2 900 1150 0 0	
+    #$ OPTION END
 
 #$ OPTION_GROUP END
 
@@ -542,7 +456,7 @@ beeper RX_LOST
 #$ OPTION_GROUP BEGIN: PID settings
   
 
-	 #$ OPTION BEGIN (UNCHECKED): five33 Race  DO NOT USE
+	 #$ OPTION BEGIN (UNCHECKED): five33 Race DO NOT USE
 		
 		profile 0
 
